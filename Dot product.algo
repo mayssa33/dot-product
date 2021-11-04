@@ -1,0 +1,34 @@
+PROCEDURE Dot product(V1,V2 : ARRAY_OF INTEGER,sum:INTEGER)
+VAR
+    i:INTEGER
+    sum:=0
+
+BEGIN
+    VAR l1:=v1.length-1;
+    VAR l2:=v2.length-1;
+    IF(l1=l2 ) THEN
+   FOR i FROM 0 TO l1 STEP 1  DO
+       sum=sum+(v1[i]*v2[i])
+       END_FOR
+       ELSE
+       write("les deux vecteurs ne sont pas egaux")
+       END_IF
+END
+        ALGORITHM dot product
+     
+VAR
+ sum:INTEGER,tab:ARRAY_OF array;
+ i,j:INTEGER;
+
+BEGIN
+ write("donner le nbre de paire ")
+ 
+ FOR i FROM 0 TO tab.length-1 STEP 1  DO
+     FOR j FROM i+1 TO tab.length-1 STEP 1  DO
+         Dot_product(tab[i],tab[j],sum);
+     END_FOR
+ END_FOR
+ IF (sum=0) THEN
+     write("les deux vecteurs sont ortho")
+ END_IF
+END
